@@ -26,3 +26,26 @@ export type WuzapiGroupListResponse = {
     Groups: WuzapiGroup[];
   };
 };
+
+export type WuzapiGroupInfo = {
+  JID: string;
+  Name: string;
+  Topic: string;
+  GroupCreated: string;
+  IsAnnounce: boolean;
+  IsLocked: boolean;
+  Participants: WuzapiGroupParticipant[];
+  [key: string]: unknown;
+};
+
+export type WuzapiGroupInfoResponse = {
+  code: number;
+  data: WuzapiGroupInfo;
+};
+
+export type WuzapiGroupJoinResponse = {
+  code: number;
+  data: {
+    Details: string;
+  };
+};
