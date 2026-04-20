@@ -1,19 +1,19 @@
-# service-wuzapi
+# wuzapi-client
 
 TypeScript client library for [Wuzapi](https://github.com/asternic/wuzapi) — a REST API for WhatsApp.
 
 ## Installation
 
 ```bash
-npm install service-wuzapi
+npm install wuzapi-client
 # or
-bun add service-wuzapi
+bun add wuzapi-client
 ```
 
 ## Usage
 
 ```ts
-import { WuzapiClient } from "service-wuzapi";
+import { WuzapiClient } from "wuzapi-client";
 
 const client = new WuzapiClient({
   baseUrl: "https://wuzapi.example.com",
@@ -54,8 +54,8 @@ const client = new WuzapiClient({
 The library exports Zod schemas and TypeScript types for parsing incoming webhook payloads:
 
 ```ts
-import { wuzapiEventSchema } from "service-wuzapi";
-import type { WuzapiEvent, WuzapiEventType } from "service-wuzapi";
+import { wuzapiEventSchema } from "wuzapi-client";
+import type { WuzapiEvent, WuzapiEventType } from "wuzapi-client";
 
 const event = wuzapiEventSchema.parse(JSON.parse(payload.jsonData));
 
@@ -67,7 +67,7 @@ if (event.type === "Message") {
 ## Error handling
 
 ```ts
-import { WuzapiHttpError, WuzapiNetworkError, WuzapiJsonError } from "service-wuzapi";
+import { WuzapiHttpError, WuzapiNetworkError, WuzapiJsonError } from "wuzapi-client";
 
 try {
   await wuzapi.chat.sendText("5511999990000", "Hello!");
