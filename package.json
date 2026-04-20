@@ -1,8 +1,21 @@
 {
-  "name": "service-wuzapi",
+  "name": "wuzapi-client",
+  "version": "0.0.0",
+  "description": "TypeScript client library for WuzAPI",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ericksprengel/wuzapi-client.git"
+  },
   "module": "src/index.ts",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "publish:local": "bun link"
