@@ -1,6 +1,6 @@
 {
   "name": "wuzapi-client",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "TypeScript client library for WuzAPI",
   "repository": {
     "type": "git",
